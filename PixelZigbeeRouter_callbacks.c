@@ -22,8 +22,8 @@
 /*** ZigBee Constants ***/
 #define DEVICE_ENDPOINT (1)
 #define GATEWAY_ENDPOINT (8)
-/*** Timers and Delays ***/
-#define SEC_RST_ZIG 						3		//seconds to reset zigbee
+/*** Timers and Delays, Resets ***/
+#define SEC_RST_ZIG 						7		//seconds to reset zigbee
 #define PERIODICALLY_REPORT_STATE			300000  //Periodically report
 /*** LED ***/
 #define LED_LONG_ON_DELAY					3000
@@ -32,8 +32,7 @@
 #define LED_BLINK_TIMES_WHEN_START			3
 #define LED_BLINK_TIMES_FAST				(30000 / LED_SHORT_BLINK_PERIOD_MS)
 #define	LED_BLINK_TIMES_MACRO(times)		(times * 2)
-/*** Resets ***/
-#define SEC_RST_ZIG 						3
+
 /*** State ***/
 #define ON 									0x10
 #define OFF 								0xEF
@@ -92,7 +91,7 @@ void inputActionEventFunction(void)
 		if(resetCounter != true) {
 			//Start 3 seconds timer
 			resetCounter = true;
-			emberEventControlSetDelayMS(inputActionEventControl, SEC_RST_ZIG*1000);
+			emberEventControlSetDelayMS(inputActionEventControl, SEC_RST_ZIG*1000); //check if bottom was pressed for 7 seconds
 		} else {
 			//Reset Device
 			emberAfCorePrintln(">>>>>>>> RESET DEVICE");
