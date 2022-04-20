@@ -22,8 +22,9 @@
 /*** ZigBee Constants ***/
 #define DEVICE_ENDPOINT (1)
 #define GATEWAY_ENDPOINT (8)
-/*** Timers and Delays ***/
-#define SEC_RST_ZIG 						3		//seconds to reset zigbee
+/*** Timers and Delays, Resets ***/
+#define SEC_RST_ZIG 						4		//seconds to reset zigbee
+#define SEC_BLINK_LED 						3		//seconds to blink the led fast
 #define PERIODICALLY_REPORT_STATE			300000  //Periodically report
 /*** LED ***/
 #define LED_LONG_ON_DELAY					3000
@@ -32,8 +33,7 @@
 #define LED_BLINK_TIMES_WHEN_START			3
 #define LED_BLINK_TIMES_FAST				(30000 / LED_SHORT_BLINK_PERIOD_MS)
 #define	LED_BLINK_TIMES_MACRO(times)		(times * 2)
-/*** Resets ***/
-#define SEC_RST_ZIG 						3
+
 /*** State ***/
 #define ON 									0x10
 #define OFF 								0xEF
@@ -42,12 +42,16 @@
 EmberEventControl inputActionEventControl;
 EmberEventControl ledEventControl;
 EmberEventControl reportStatusEventControl;
+EmberEventControl delayLed;
 
 /*** Status vars ***/
 static uint8_t statusOnOff;
+static uint8_t statusBlink;
 /*** Control vars ***/
 /*** Button ***/
 static bool resetCounter = false;
+static bool ledStartBlinkCounter = false;
+static bool ledOnOffCounter = false;
 static bool buttonPressed = false;
 /*** LED ***/
 static bool ledLeavingNetwork = false;
@@ -62,8 +66,8 @@ void resetZigbee(void);
 /*** Send Data ***/
 void sendStateFunction(void);
 /*** Output Controllers ***/
-void outputController(void);
-
+void outputController(void); //On Off Led
+void outputControllerBlinkLed(void); //Blink Led
 
 
 //------------------------------------------------------------------------------
@@ -85,25 +89,64 @@ void inputActionEventFunction(void)
 {
 	emberEventControlSetInactive(inputActionEventControl);
 
-	emberAfCorePrintln(">>>>>>>> RESET COUNTER: %d", resetCounter);
-	emberAfCorePrintln(">>>>>>>> RESET BUTTON: %d", buttonPressed);
+	emberAfCorePrintln(">>>>>>>> RESET COUNTER: %d");
+	emberAfCorePrintln(">>>>>>>> STATUS BUTTON: %d", buttonPressed);
+	emberAfCorePrintln(">>>>>>>> BLINK LED: %d", ledStartBlinkCounter);
+	emberAfCorePrintln(">>>>>>>> Led status On or Off: %d", ledOnOffCounter);
+
 
 	if(buttonPressed){
-		if(resetCounter != true) {
+
+		if (ledStartBlinkCounter != true){
 			//Start 3 seconds timer
-			resetCounter = true;
-			emberEventControlSetDelayMS(inputActionEventControl, SEC_RST_ZIG*1000);
-		} else {
-			//Reset Device
-			emberAfCorePrintln(">>>>>>>> RESET DEVICE");
-			resetCounter = false;
-			resetZigbee();
+			ledStartBlinkCounter = true;
+			emberEventControlSetDelayMS(inputActionEventControl, SEC_BLINK_LED*1000);
 		}
-	} else
-		resetCounter = false;
+		else{
+			if (resetCounter != true)
+			{
+				//Start 7 seconds timer
+				resetCounter = true;
+				emberEventControlSetDelayMS(inputActionEventFunction, SEC_RST_ZIG*1000);
+			} else
+			{
+				//Reset Device
+				emberAfCorePrintln(">>>>>>>> RESET DEVICE");
+				resetZigbee();
+				resetCounter = false;
+				ledStartBlinkCounter = false;
+				ledOnOffCounter = true;
+				statusBlink = OFF;
+			}
+		}
+	}else /* if button is unpressed < 3 or < 7 seconds */
+	{
+		if (ledOnOffCounter != true && resetCounter)
+		{
+			statusBlink = ON;
+			outputControllerBlinkLed();
+			resetCounter = false;
+		}
+		else if(ledOnOffCounter != true && ledStartBlinkCounter){
+			statusBlink = OFF;
+			emberAfAppPrintln("\r\n");
+			if (statusOnOff == ON) {
+				statusOnOff = OFF;
+				emberAfAppPrintln(">>> OFF <<<");
+			} else {
+				statusOnOff = ON;
+				emberAfAppPrintln(">>> ON <<<");
+			}
+			emberAfAppPrintln("\r\n");
+			outputController();
+			ledStartBlinkCounter = false;
+		}
+	}
+
 
 	if(emberAfNetworkState() == EMBER_JOINED_NETWORK_NO_PARENT)
 		emberAfPluginConnectionManagerRejoinEventHandler();
+
 }
 
 /*********************************************************************
@@ -258,6 +301,30 @@ void outputController(void)
 	} else {
 		halClearLed(LED_OUTPUT);
 	}
+}
+
+
+/*********************************************************************
+ * @fn      outputControllerBlinkLed()
+ *
+ * @brief   Control function to output pin for action
+ * @Led is bliking 300ms bettwen On or Off
+ * @param   none
+ *
+ * @return  none
+ */
+void outputControllerBlinkLed(void)
+{
+
+	if (statusBlink == ON) {
+
+		if (statusOnOff == OFF) {
+			halSetLed(LED_OUTPUT);
+		}else{
+			halClearLed(LED_OUTPUT);
+		}
+	}
+
 }
 
 //------------------------------------------------------------------------------
