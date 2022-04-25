@@ -5,6 +5,10 @@
  * # Author
  * <b>Roberto Luiz Assad Pinheiro - roberto.pinheiro@pixelti.com.br</b>
  *******************************************************************************/
+/***************************************************************************//**
+ * # Edited by
+ * <b>Rafael Bernardes - rafael@pixelti.com.br</b>
+ *******************************************************************************/
 
 
 // This callback file is created for your convenience. You may add application
