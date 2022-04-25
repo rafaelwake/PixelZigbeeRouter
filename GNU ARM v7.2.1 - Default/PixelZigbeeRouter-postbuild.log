@@ -122,3 +122,63 @@ INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/de
 INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
 INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
 INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
+INFO:root:Creation of 32 bit srec file: "C:/SiliconLabs/SimplicityStudio/v4_2/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy" --srec-forceS3 -O srec "PixelZigbeeRouter.axf" "PixelZigbeeRouter.s37"
+INFO:root:Creation of ebl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe ebl create "PixelZigbeeRouter.ebl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48 
+INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4_2\developer\adapter_packs\commander\commander.exe gbl create "PixelZigbeeRouter.gbl" --app "PixelZigbeeRouter.s37" --device EFR32MG1P132F256GM48
+INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled

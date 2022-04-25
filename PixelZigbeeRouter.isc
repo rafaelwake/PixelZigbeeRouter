@@ -53,6 +53,7 @@ enable,DEBUG
 inputActionEventControl,inputActionEventFunction
 ledEventControl,ledEventFunction
 reportStatusEventControl,reportStatusEventFunction
+outputControllerBlinkLed,outputControllerBlinkLedFunction
 }
 {setupId:halOptions
 }

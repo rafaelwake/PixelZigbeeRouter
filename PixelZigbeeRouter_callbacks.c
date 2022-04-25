@@ -42,11 +42,11 @@
 EmberEventControl inputActionEventControl;
 EmberEventControl ledEventControl;
 EmberEventControl reportStatusEventControl;
-EmberEventControl delayLed;
+EmberEventControl outputControllerBlinkLed; //blink led for 300ms
 
 /*** Status vars ***/
 static uint8_t statusOnOff;
-static uint8_t statusBlink;
+static bool statusBlink = false;
 /*** Control vars ***/
 /*** Button ***/
 static bool resetCounter = false;
@@ -67,8 +67,6 @@ void resetZigbee(void);
 void sendStateFunction(void);
 /*** Output Controllers ***/
 void outputController(void); //On Off Led
-void outputControllerBlinkLed(void); //Blink Led
-
 
 //------------------------------------------------------------------------------
 /*
@@ -107,28 +105,29 @@ void inputActionEventFunction(void)
 			{
 				//Start 7 seconds timer
 				resetCounter = true;
-				emberEventControlSetDelayMS(inputActionEventFunction, SEC_RST_ZIG*1000);
+				emberEventControlSetDelayMS(inputActionEventControl, SEC_RST_ZIG*1000);
 			} else
 			{
 				//Reset Device
 				emberAfCorePrintln(">>>>>>>> RESET DEVICE");
-				resetZigbee();
 				resetCounter = false;
 				ledStartBlinkCounter = false;
 				ledOnOffCounter = true;
-				statusBlink = OFF;
+				statusBlink = false;
+				resetZigbee();
 			}
 		}
 	}else /* if button is unpressed < 3 or < 7 seconds */
 	{
 		if (ledOnOffCounter != true && resetCounter)
 		{
-			statusBlink = ON;
-			outputControllerBlinkLed();
 			resetCounter = false;
+			ledStartBlinkCounter = false;
+			statusBlink = true;
+			emberEventControlSetActive(outputControllerBlinkLed);
 		}
 		else if(ledOnOffCounter != true && ledStartBlinkCounter){
-			statusBlink = OFF;
+			statusBlink = false;
 			emberAfAppPrintln("\r\n");
 			if (statusOnOff == ON) {
 				statusOnOff = OFF;
@@ -139,9 +138,10 @@ void inputActionEventFunction(void)
 			}
 			emberAfAppPrintln("\r\n");
 			outputController();
-			ledStartBlinkCounter = false;
 			sendStateFunction();
 		}
+		ledStartBlinkCounter = false;
+		ledOnOffCounter = false;
 	}
 
 
@@ -306,7 +306,7 @@ void outputController(void)
 
 
 /*********************************************************************
- * @fn      outputControllerBlinkLed()
+ * @fn      outputControllerBlinkLedFunction()
  *
  * @brief   Control function to output pin for action
  * @Led is bliking 300ms bettwen On or Off
@@ -314,18 +314,22 @@ void outputController(void)
  *
  * @return  none
  */
-void outputControllerBlinkLed(void)
+void outputControllerBlinkLedFunction(void)
 {
 
-	if (statusBlink == ON) {
+		if (statusBlink) {
 
-		if (statusOnOff == OFF) {
-			halSetLed(LED_OUTPUT);
+			if (statusOnOff == OFF) {
+				halSetLed(LED_OUTPUT);
+				statusOnOff = ON;
+			}else{
+				halClearLed(LED_OUTPUT);
+				statusOnOff = OFF;
+			}
+			emberEventControlSetDelayMS(outputControllerBlinkLed, LED_SHORT_BLINK_PERIOD_MS);
 		}else{
-			halClearLed(LED_OUTPUT);
+			emberEventControlSetInactive(outputControllerBlinkLed);
 		}
-	}
-
 }
 
 //------------------------------------------------------------------------------
@@ -495,7 +499,7 @@ void emberAfOnOffClusterServerAttributeChangedCallback(uint8_t endpoint,
 				emberAfAppPrintln(">>> OFF <<<");
 			}
 			emberAfAppPrintln("\r\n");
-
+			statusBlink = false;
 			outputController();
 		}
 	}

@@ -53,9 +53,9 @@
   "Network Steering Plugin FinishSteering",  \
   "Scan Dispatch Plugin Scan",  \
   "Update TC Link Key Plugin BeginTcLinkKeyUpdate",  \
-  "Event data",  \
-  "Event data",  \
-  "Event data",  \
+  "Input action event control",  \
+  "Led event control",  \
+  "Report status event control",  \
 
 
 #endif // __AF_GEN_EVENT__
