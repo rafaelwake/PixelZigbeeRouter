@@ -18,6 +18,7 @@
   extern EmberEventControl emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl; \
   extern EmberEventControl inputActionEventControl; \
   extern EmberEventControl ledEventControl; \
+  extern EmberEventControl outputControllerBlinkLed; \
   extern EmberEventControl reportStatusEventControl; \
   extern void emberAfPluginConnectionManagerPollEventHandler(void); \
   extern void emberAfPluginConnectionManagerRebootEventHandler(void); \
@@ -28,6 +29,7 @@
   extern void emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler(void); \
   extern void inputActionEventFunction(void); \
   extern void ledEventFunction(void); \
+  extern void outputControllerBlinkLedFunction(void); \
   extern void reportStatusEventFunction(void); \
 
 
@@ -42,6 +44,7 @@
   { &emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventControl, emberAfPluginUpdateTcLinkKeyBeginTcLinkKeyUpdateEventHandler }, \
   { &inputActionEventControl, inputActionEventFunction }, \
   { &ledEventControl, ledEventFunction }, \
+  { &outputControllerBlinkLed, outputControllerBlinkLedFunction }, \
   { &reportStatusEventControl, reportStatusEventFunction }, \
 
 
@@ -55,6 +58,7 @@
   "Update TC Link Key Plugin BeginTcLinkKeyUpdate",  \
   "Input action event control",  \
   "Led event control",  \
+  "Event data",  \
   "Report status event control",  \
 
 
