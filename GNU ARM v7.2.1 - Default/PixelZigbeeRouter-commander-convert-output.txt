@@ -10,7 +10,7 @@ Flash Usage:
 Usage Summary:
   262144 total bytes Flash, 256924 used, 5220 available
 
-Setting AAT timestamp to current time: 0x62605a28
+Setting AAT timestamp to current time: 0x62668867
 Create ebl image file
 Wrote image stamp into AAT.
 DONE

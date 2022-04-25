@@ -140,6 +140,7 @@ void inputActionEventFunction(void)
 			emberAfAppPrintln("\r\n");
 			outputController();
 			ledStartBlinkCounter = false;
+			sendStateFunction();
 		}
 	}
 
